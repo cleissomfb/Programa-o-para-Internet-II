@@ -1,0 +1,587 @@
+{
+	"info": {
+		"_postman_id": "0b0e7aa8-be76-45da-8715-5e28f4f1d791",
+		"name": "trabalho_pi2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/Usuarios",
+			"item": [
+				{
+					"name": "Listar /usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir /usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"id_usuario\": 0,\r\n    \"login_usuario\": \"lucas\",\r\n    \"senha_usuario\": \"lucas97\",\r\n    \"nome_usuario\": \"Lucas Morais\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar /usuarios/:id_usuario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id_usuario\": 7,\r\n        \"login_usuario\": \"leob\",\r\n        \"senha_usuario\": \"leoc\",\r\n        \"nome_usuario\": \"Leonardo Caldeira Benites\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorId /usuario/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/usuarios/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar /usuario/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/usuarios/8",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorNome /usuarios/:nome_usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/usuarios/search/le",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"search",
+								"le"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "/Equipamentos",
+			"item": [
+				{
+					"name": "Listar /equipamentos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/equipamentos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"equipamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorId /equipamentos/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/equipamentos/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"equipamentos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorPatrimonio /equipamentos/patrimonio/:patri_equipamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/equipamentos/search/patrimonio/100001",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"equipamentos",
+								"search",
+								"patrimonio",
+								"100001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorNroSerie /equipamentos/serie/:nro_serie_equipamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/equipamentos/search/serie/DG2L1B",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"equipamentos",
+								"search",
+								"serie",
+								"DG2L1B"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorModelo /equipamentos/modelo/:modelo_equipamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/equipamentos/search/modelo/core",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"equipamentos",
+								"search",
+								"modelo",
+								"core"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorLocal /equipamentos/local/:local_equipamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/equipamentos/search/local/hco",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"equipamentos",
+								"search",
+								"local",
+								"hco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar /equipamentos/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/equipamentos/id/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"equipamentos",
+								"id",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarPorPatrimonio /equipamentos/:patri_equipamento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/equipamentos/patrimonio/144503",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"equipamentos",
+								"patrimonio",
+								"144503"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir /equipamento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiNCIsIm5vbWUiOiJNYXJjZWxsbyIsImxvZ2luIjoibW1tIiwic2VuaGEiOiJtbW0ifQ.MNgR7k1QMUFLCuyKrJkc7EDtS1Qh4X30-Kj-kvAsTY4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patri_equipamento\": 144503,\r\n    \"modelo_equipamento\": \"MICROCOMPUTADOR DO TIPO DESKTOP LENOVO\",\r\n    \"nro_serie_equipamento\": \"PE81263\",\r\n    \"data_aquisicao\": \"2010-08-03\",\r\n    \"nro_nota_fiscal\": 253497628,\r\n    \"local_equipamento\": \"21870 - HCO-EMERGENCIA / ENFERM\",\r\n    \"observacao\": \"\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/equipamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"equipamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar /equipamentos/:patri_equipamento",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id_equipamento\": 2,\r\n        \"patri_equipamento\": 100001,\r\n        \"modelo_equipamento\": \"MICRO PENTIUM CORE2 DUO- HD 160GB - 1GB MB - MARCA: HP\",\r\n        \"nro_serie_equipamento\": \"BRG838F9W2\",\r\n        \"data_aquisicao\": \"2009-10-12\",\r\n        \"nro_nota_fiscal\": 42586547,\r\n        \"local_equipamento\": \"11803 - HCO-CONTROLE DE INFECCAO\",\r\n        \"observacao\": \"4 Andar do HCO\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/equipamentos/100001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"equipamentos",
+								"100001"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "/Chamados",
+			"item": [
+				{
+					"name": "Inserir /chamados",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patri_equipamento\": 156964,\r\n    \"nome_usuario\": \"Mario\",\r\n    \"desc_problema\": \"Micro Travando\",\r\n    \"solucao_problema\": \"\",\r\n    \"id_status\": 1,\r\n    \"id_usuario\": 7\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/chamados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chamados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar /chamados/:patri_equipamento",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id_chamado\": 8,\r\n    \"patri_equipamento\": 156964,\r\n    \"nome_usuario\": \"Mario\",\r\n    \"desc_problema\": \"Micro Travando\",\r\n    \"solucao_problema\": \"Formatado o micro.\",\r\n    \"id_status\": 1,\r\n    \"id_usuario\": 7\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/chamados/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chamados",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar /chamados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/chamados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chamados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar /chamados/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chamados/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chamados",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorStatus /chamados/search/status/:id_status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chamados/search/status/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chamados",
+								"search",
+								"status",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Autenticar ",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiMiIsIm5vbWUiOiJDbGVpc3NvbSBGQiJ9.g6IWB6ImrQ6OpAaaswLSK58DYFbTT5-ltn3WWTyS86M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"login_usuario\":\"mmm\",\n\t\"senha_usuario\":\"mmm\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
